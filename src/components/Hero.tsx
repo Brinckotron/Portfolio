@@ -38,19 +38,21 @@ const Hero = () => {
           </div>
 
           {/* Tech Stack Preview */}
-          <div className="flex flex-wrap justify-center gap-3 max-w-2xl mx-auto">
+          <div className="flex flex-wrap justify-center gap-3 max-w-2xl mx-auto mb-12">
             {['C++', 'Unity', 'Unreal Engine', 'C#', 'OpenGL', 'Vulkan', 'DirectX'].map((tech) => (
               <span key={tech} className="tech-badge animate-fade-in-up" style={{animationDelay: `${Math.random() * 0.5}s`}}>
                 {tech}
               </span>
             ))}
           </div>
-        </div>
 
-        {/* Scroll Indicator */}
-        <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
-          <div className="w-6 h-10 border-2 border-blue-400 rounded-full flex justify-center">
-            <div className="w-1 h-3 bg-blue-400 rounded-full mt-2 animate-pulse"></div>
+          {/* Scroll Indicator */}
+          <div className="flex justify-center">
+            <div className="animate-bounce">
+              <div className="w-6 h-10 border-2 border-blue-400 rounded-full flex justify-center">
+                <div className="w-1 h-3 bg-blue-400 rounded-full mt-2 animate-pulse"></div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
