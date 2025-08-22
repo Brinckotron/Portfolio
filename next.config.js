@@ -3,13 +3,12 @@ const nextConfig = {
   output: 'export',
   trailingSlash: true,
   skipTrailingSlashRedirect: true,
-  distDir: 'out',
+  distDir: 'dist',
   images: {
     unoptimized: true
   },
-  assetPrefix: process.env.NODE_ENV === 'production' ? '' : '',
+  assetPrefix: '',
   basePath: '',
-
 }
 
 module.exports = nextConfig
