@@ -12,12 +12,12 @@ const Hero = () => {
         <div className="text-center animate-fade-in-up">
           <div className="mb-6">
             <h1 className="text-4xl sm:text-6xl lg:text-7xl font-bold mb-4">
-              <span className="block gradient-text">Game Developer</span>
-              <span className="block text-white">& Programmer</span>
+              <span className="block text-white">François</span>
+              <span className="block gradient-text">Brinck-Boucher</span>
             </h1>
             <p className="text-xl sm:text-2xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
-              Crafting immersive digital experiences through innovative game development, 
-              engine programming, and cutting-edge technology solutions.
+              Finissant en programmation de jeux vidéo passionné par la création d'expériences 
+              immersives et la programmation de moteurs de jeu avancés.
             </p>
           </div>
 
@@ -26,20 +26,20 @@ const Hero = () => {
               href="#projects"
               className="group bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-blue-500/25"
             >
-              View My Games
+              Voir Mes Jeux
               <span className="ml-2 group-hover:translate-x-1 transition-transform duration-200">→</span>
             </a>
             <a
               href="#contact"
               className="border-2 border-blue-500 text-blue-400 px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 hover:bg-blue-500 hover:text-white hover:scale-105"
             >
-              Get In Touch
+              Me Contacter
             </a>
           </div>
 
           {/* Tech Stack Preview */}
           <div className="flex flex-wrap justify-center gap-3 max-w-2xl mx-auto mb-12">
-            {['C++', 'Unity', 'Unreal Engine', 'C#', 'OpenGL', 'Vulkan', 'DirectX'].map((tech) => (
+            {['C++', 'C#', 'Unity', 'Unreal Engine 5', 'JavaScript', 'React', 'Java'].map((tech) => (
               <span key={tech} className="tech-badge animate-fade-in-up" style={{animationDelay: `${Math.random() * 0.5}s`}}>
                 {tech}
               </span>

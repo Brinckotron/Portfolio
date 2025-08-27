@@ -26,20 +26,20 @@ const Contact = () => {
   }
 
   const socialLinks = [
-    { name: 'GitHub', icon: '🔗', url: '#' },
-    { name: 'LinkedIn', icon: '💼', url: '#' },
-    { name: 'Twitter', icon: '🐦', url: '#' },
-    { name: 'Discord', icon: '💬', url: '#' }
+    { name: 'GitHub', icon: '🔗', url: 'https://github.com/Brinckotron' },
+    { name: 'LinkedIn', icon: '💼', url: 'https://www.linkedin.com/in/fran%C3%A7ois-brinck-boucher-10868a332/' },
+    { name: 'itch.io', icon: '🎮', url: 'https://brinckotron.itch.io/' },
+    { name: 'Email', icon: '📧', url: 'mailto:f.brinck.boucher@gmail.com' }
   ]
 
   return (
     <section id="contact" className="section-padding">
       <div className="container mx-auto max-w-6xl">
         <div className="text-center mb-16">
-          <h2 className="text-4xl lg:text-5xl font-bold gradient-text mb-6">Get In Touch</h2>
+          <h2 className="text-4xl lg:text-5xl font-bold gradient-text mb-6">Contactez-moi</h2>
           <div className="w-24 h-1 bg-gradient-to-r from-blue-500 to-purple-500 mx-auto mb-4"></div>
           <p className="text-gray-300 text-lg max-w-2xl mx-auto">
-            Ready to collaborate on your next game project? Let's discuss how we can bring your vision to life.
+            Prêt à collaborer sur votre prochain projet de jeu? Discutons de comment nous pouvons donner vie à votre vision.
           </p>
         </div>
 
@@ -47,12 +47,12 @@ const Contact = () => {
           {/* Contact Form */}
           <div className="space-y-6">
             <div className="bg-slate-900/50 rounded-xl p-8 border border-slate-700/50">
-              <h3 className="text-2xl font-bold text-white mb-6">Send a Message</h3>
+              <h3 className="text-2xl font-bold text-white mb-6">Envoyer un Message</h3>
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div className="grid md:grid-cols-2 gap-4">
                   <div>
                     <label htmlFor="name" className="block text-sm font-medium text-gray-300 mb-2">
-                      Your Name
+                      Votre Nom
                     </label>
                     <input
                       type="text"
@@ -62,12 +62,12 @@ const Contact = () => {
                       onChange={handleChange}
                       required
                       className="w-full px-4 py-3 bg-slate-800/50 border border-slate-600/50 rounded-lg text-white placeholder-gray-400 focus:border-blue-500 focus:outline-none transition-colors"
-                      placeholder="John Doe"
+                      placeholder="Jean Dupont"
                     />
                   </div>
                   <div>
                     <label htmlFor="email" className="block text-sm font-medium text-gray-300 mb-2">
-                      Email Address
+                      Adresse Email
                     </label>
                     <input
                       type="email"
@@ -77,14 +77,14 @@ const Contact = () => {
                       onChange={handleChange}
                       required
                       className="w-full px-4 py-3 bg-slate-800/50 border border-slate-600/50 rounded-lg text-white placeholder-gray-400 focus:border-blue-500 focus:outline-none transition-colors"
-                      placeholder="john@example.com"
+                      placeholder="jean@exemple.com"
                     />
                   </div>
                 </div>
                 
                 <div>
                   <label htmlFor="subject" className="block text-sm font-medium text-gray-300 mb-2">
-                    Subject
+                    Sujet
                   </label>
                   <input
                     type="text"
@@ -94,7 +94,7 @@ const Contact = () => {
                     onChange={handleChange}
                     required
                     className="w-full px-4 py-3 bg-slate-800/50 border border-slate-600/50 rounded-lg text-white placeholder-gray-400 focus:border-blue-500 focus:outline-none transition-colors"
-                    placeholder="Project Collaboration"
+                    placeholder="Collaboration de Projet"
                   />
                 </div>
 
@@ -110,7 +110,7 @@ const Contact = () => {
                     rows={6}
                     required
                     className="w-full px-4 py-3 bg-slate-800/50 border border-slate-600/50 rounded-lg text-white placeholder-gray-400 focus:border-blue-500 focus:outline-none transition-colors resize-none"
-                    placeholder="Tell me about your project ideas..."
+                    placeholder="Parlez-moi de vos idées de projet..."
                   />
                 </div>
 
@@ -118,7 +118,7 @@ const Contact = () => {
                   type="submit"
                   className="w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:scale-105 transition-all duration-300 hover:shadow-2xl hover:shadow-blue-500/25"
                 >
-                  Send Message
+                  Envoyer le Message
                 </button>
               </form>
             </div>
@@ -127,7 +127,7 @@ const Contact = () => {
           {/* Contact Information */}
           <div className="space-y-6">
             <div className="bg-slate-900/50 rounded-xl p-8 border border-slate-700/50">
-              <h3 className="text-2xl font-bold text-white mb-6">Let's Connect</h3>
+              <h3 className="text-2xl font-bold text-white mb-6">Connectons-nous</h3>
               
               <div className="space-y-6">
                 <div className="flex items-start space-x-4">
@@ -136,42 +136,44 @@ const Contact = () => {
                   </div>
                   <div>
                     <h4 className="font-semibold text-white">Email</h4>
-                    <p className="text-gray-300">hello@francoisgamedev.com</p>
-                    <p className="text-gray-400 text-sm">I'll respond within 24 hours</p>
+                    <p className="text-gray-300">f.brinck.boucher@gmail.com</p>
+                    <p className="text-gray-400 text-sm">Je réponds dans les 24 heures</p>
                   </div>
                 </div>
 
                 <div className="flex items-start space-x-4">
                   <div className="w-12 h-12 bg-purple-600/20 rounded-lg flex items-center justify-center flex-shrink-0">
-                    <span className="text-purple-400 text-xl">🌍</span>
+                    <span className="text-purple-400 text-xl">📍</span>
                   </div>
                   <div>
-                    <h4 className="font-semibold text-white">Location</h4>
-                    <p className="text-gray-300">Available Worldwide</p>
-                    <p className="text-gray-400 text-sm">Remote collaboration welcome</p>
+                    <h4 className="font-semibold text-white">Localisation</h4>
+                    <p className="text-gray-300">Montréal, QC, Canada</p>
+                    <p className="text-gray-400 text-sm">Collaboration à distance bienvenue</p>
                   </div>
                 </div>
 
                 <div className="flex items-start space-x-4">
                   <div className="w-12 h-12 bg-green-600/20 rounded-lg flex items-center justify-center flex-shrink-0">
-                    <span className="text-green-400 text-xl">💼</span>
+                    <span className="text-green-400 text-xl">📞</span>
                   </div>
                   <div>
-                    <h4 className="font-semibold text-white">Availability</h4>
-                    <p className="text-gray-300">Open to new projects</p>
-                    <p className="text-gray-400 text-sm">Full-time & contract opportunities</p>
+                    <h4 className="font-semibold text-white">Téléphone</h4>
+                    <p className="text-gray-300">514-774-0816</p>
+                    <p className="text-gray-400 text-sm">Disponible pour opportunités temps plein</p>
                   </div>
                 </div>
               </div>
 
               {/* Social Links */}
               <div className="mt-8 pt-6 border-t border-slate-700/50">
-                <h4 className="font-semibold text-white mb-4">Find me online</h4>
+                <h4 className="font-semibold text-white mb-4">Trouvez-moi en ligne</h4>
                 <div className="flex space-x-4">
                   {socialLinks.map((link, index) => (
                     <a
                       key={index}
                       href={link.url}
+                      target={link.url.startsWith('http') ? '_blank' : '_self'}
+                      rel={link.url.startsWith('http') ? 'noopener noreferrer' : undefined}
                       className="w-12 h-12 bg-slate-800/50 rounded-lg flex items-center justify-center text-xl hover:bg-blue-600/20 hover:text-blue-400 transition-all duration-300 border border-slate-600/50 hover:border-blue-500/50"
                       title={link.name}
                     >
@@ -184,14 +186,15 @@ const Contact = () => {
 
             {/* Quick Stats */}
             <div className="bg-gradient-to-br from-blue-600/10 to-purple-600/10 rounded-xl p-6 border border-blue-500/20">
-              <h4 className="font-semibold text-white mb-4">Why Work With Me?</h4>
+              <h4 className="font-semibold text-white mb-4">Pourquoi Travailler Avec Moi?</h4>
               <div className="space-y-3">
                 {[
-                  '✨ 5+ years of professional game development',
-                  '🚀 Proven track record with shipped projects',
-                  '🔧 Full-stack development capabilities',
-                  '🎯 Focus on performance and optimization',
-                  '🤝 Collaborative and communicative approach'
+                  '✨ Finissant en programmation jeux vidéo (2025)',
+                  '🚀 Expérience avec projets complexes et complets',
+                  '🔧 Compétences en développement web et jeux',
+                  '🎯 Focus sur optimisation et architecture propre',
+                  '🤝 Approche collaborative et communicative',
+                  '💡 Agentic Coding et technologies modernes'
                 ].map((item, index) => (
                   <div key={index} className="flex items-center text-gray-300 text-sm">
                     <span className="mr-2">{item}</span>

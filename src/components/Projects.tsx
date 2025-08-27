@@ -8,125 +8,124 @@ const Projects = () => {
   const projects = [
     {
       id: 1,
-      title: 'Custom Game Engine',
-      description: 'A modern, multi-threaded game engine built from scratch with Vulkan rendering',
-      longDescription: 'Complete game engine featuring advanced rendering pipeline, entity-component system, and comprehensive tooling.',
+      title: 'ProjectXCAPE',
+      description: 'Jeu d\'horreur puzzle 3D en première personne avec IA complexe et systèmes d\'interaction avancés',
+      longDescription: 'Jeu d\'aventure immersif situé dans une tombe égyptienne ancienne avec puzzles complexes et IA Anubis.',
       image: '/api/placeholder/600/400',
-      technologies: ['C++', 'Vulkan', 'OpenGL', 'ImGui'],
-      category: 'engine',
+      technologies: ['Unreal Engine 5', 'C++', 'Blueprints', 'Animation'],
+      category: 'game',
       status: 'completed',
       year: 2024,
       features: [
-        'Multi-threaded architecture',
-        'Vulkan/OpenGL renderer',
-        'Entity-Component-System',
-        'Built-in editor tools',
-        'Advanced lighting system',
-        'Cross-platform support'
+        'Système IA complexe avec Behavior Trees',
+        'Système d\'inventaire dynamique',
+        'Framework d\'interaction avancé',
+        'Systèmes de puzzles modulaires',
+        'Animation events personnalisés',
+        'Optimisation mémoire et performance'
       ]
     },
     {
       id: 2,
-      title: '3D Action Platformer',
-      description: 'Fast-paced 3D platformer with dynamic camera system and responsive controls',
-      longDescription: 'Engaging platformer featuring smooth character movement, dynamic environments, and polished gameplay mechanics.',
+      title: 'Poker Roguelite',
+      description: 'Jeu de poker roguelite pour Android avec IA adaptive et systèmes de progression',
+      longDescription: 'Jeu de poker sophistiqué avec mécaniques roguelite, IA adaptative et progression par reliques.',
       image: '/api/placeholder/600/400',
-      technologies: ['Unity', 'C#', 'ProBuilder', 'Cinemachine'],
+      technologies: ['Unity', 'C#', 'Android SDK', 'LINQ'],
       category: 'game',
       status: 'completed',
       year: 2023,
       features: [
-        'Responsive character controller',
-        'Dynamic camera system',
-        'Interactive environments',
-        'Particle effects system',
-        'Audio integration',
-        'Level progression system'
+        'Algorithme de reconnaissance de mains poker',
+        'IA adaptative avec difficulté progressive',
+        'Système de reliques et upgrades',
+        'Interface mobile optimisée',
+        'Système d\'animation de cartes',
+        'Architecture événementielle'
       ]
     },
     {
       id: 3,
-      title: 'Shader Library',
-      description: 'Collection of advanced shaders for realistic lighting and visual effects',
-      longDescription: 'Comprehensive shader library featuring PBR materials, post-processing effects, and advanced lighting techniques.',
+      title: 'Moteur De Jeu Project',
+      description: 'Plateforme action-aventure roguelite 2D avec systèmes de combat et progression',
+      longDescription: 'Projet personnel ambitieux montrant la persistance et les compétences techniques croissantes.',
       image: '/api/placeholder/600/400',
-      technologies: ['HLSL', 'GLSL', 'Unity ShaderGraph', 'DirectX'],
-      category: 'tool',
-      status: 'completed',
-      year: 2023,
-      features: [
-        'PBR material shaders',
-        'Post-processing effects',
-        'Animated materials',
-        'Optimization techniques',
-        'Cross-platform compatibility',
-        'Documentation and examples'
-      ]
-    },
-    {
-      id: 4,
-      title: 'Multiplayer Racing Game',
-      description: 'Online multiplayer racing game with custom physics and networking',
-      longDescription: 'High-speed multiplayer racing experience with custom vehicle physics and robust networking architecture.',
-      image: '/api/placeholder/600/400',
-      technologies: ['Unreal Engine', 'C++', 'Blueprints', 'Dedicated Servers'],
+      technologies: ['Unity', 'C#', 'URP', 'Animation 2D'],
       category: 'game',
       status: 'in-progress',
       year: 2024,
       features: [
-        'Custom vehicle physics',
-        'Multiplayer networking',
-        'Track editor',
-        'Performance optimization',
-        'Vehicle customization',
-        'Anti-cheat systems'
+        'Machine à états complexe pour le joueur',
+        'IA ennemie polymorphique',
+        'Système de progression et XP',
+        'Interface utilisateur dynamique',
+        'Système audio intégré',
+        'Architecture modulaire'
+      ]
+    },
+    {
+      id: 4,
+      title: 'ZombieShooter',
+      description: 'Jeu de tir de survie 2D avec LibGDX et intégration base de données MySQL',
+      longDescription: 'Démontre les concepts fondamentaux des moteurs de jeu et la persistance des données.',
+      image: '/api/placeholder/600/400',
+      technologies: ['LibGDX', 'Java', 'MySQL', 'JDBC'],
+      category: 'game',
+      status: 'completed',
+      year: 2023,
+      features: [
+        'Pipeline de rendu 2D efficace',
+        'Système de power-ups dynamique',
+        'Intégration base de données MySQL',
+        'Architecture Entity-Component',
+        'Système de high scores persistant',
+        'Gestion des assets centralisée'
       ]
     },
     {
       id: 5,
-      title: 'Level Editor Tool',
-      description: 'Visual level editor with real-time collaboration features',
-      longDescription: 'Professional-grade level editing tool with intuitive interface and collaborative development features.',
+      title: 'D&D Point Buy Calculator',
+      description: 'Application desktop WPF pour calculer les statistiques D&D avec interface intuitive',
+      longDescription: 'Outil pratique créé très tôt dans mon parcours, démontrant la passion pour résoudre des problèmes réels.',
       image: '/api/placeholder/600/400',
-      technologies: ['C++', 'Qt', 'OpenGL', 'WebSockets'],
+      technologies: ['C#', 'WPF', '.NET 6', 'XAML'],
       category: 'tool',
       status: 'completed',
-      year: 2023,
+      year: 2022,
       features: [
-        'Real-time collaboration',
-        'Intuitive drag-drop interface',
-        'Asset management system',
-        'Undo/redo functionality',
-        'Export to multiple formats',
-        'Plugin architecture'
+        'Interface WPF responsive',
+        'Calculs mathématiques Point Buy',
+        'Gestion d\'état pour scores',
+        'Système de randomisation',
+        'Visualisateur de stats avancé',
+        'Architecture MVVM'
       ]
     },
     {
       id: 6,
-      title: 'AI Behavior System',
-      description: 'Modular AI framework for dynamic NPC behaviors and decision making',
-      longDescription: 'Sophisticated AI system featuring behavior trees, state machines, and machine learning integration.',
+      title: 'Spectrail',
+      description: 'Jeu créé pour Game Jam avec level design, concept et programmation',
+      longDescription: 'Projet collaboratif démontrant les compétences en game design et développement rapide.',
       image: '/api/placeholder/600/400',
-      technologies: ['C++', 'Python', 'TensorFlow', 'Behavior Trees'],
-      category: 'engine',
+      technologies: ['Unity', 'C#', 'Level Design', 'Game Design'],
+      category: 'game',
       status: 'completed',
       year: 2023,
       features: [
-        'Behavior tree system',
-        'State machine framework',
-        'Pathfinding algorithms',
-        'Machine learning integration',
-        'Visual debugging tools',
-        'Performance profiling'
+        'Développement rapide (Game Jam)',
+        'Level design créatif',
+        'Mécaniques de jeu innovantes',
+        'Collaboration d\'équipe',
+        'Polish et finition',
+        'Publication sur itch.io'
       ]
     }
   ]
 
   const filters = [
-    { id: 'all', label: 'All Projects' },
-    { id: 'game', label: 'Games' },
-    { id: 'engine', label: 'Engine' },
-    { id: 'tool', label: 'Tools' }
+    { id: 'all', label: 'Tous les Projets' },
+    { id: 'game', label: 'Jeux' },
+    { id: 'tool', label: 'Outils' }
   ]
 
   const filteredProjects = activeFilter === 'all' 
@@ -137,10 +136,10 @@ const Projects = () => {
     <section id="projects" className="section-padding bg-slate-800/30">
       <div className="container mx-auto max-w-7xl">
         <div className="text-center mb-16">
-          <h2 className="text-4xl lg:text-5xl font-bold gradient-text mb-6">Featured Projects</h2>
+          <h2 className="text-4xl lg:text-5xl font-bold gradient-text mb-6">Projets Principaux</h2>
           <div className="w-24 h-1 bg-gradient-to-r from-blue-500 to-purple-500 mx-auto mb-4"></div>
           <p className="text-gray-300 text-lg max-w-2xl mx-auto">
-            Showcasing innovative game development projects and technical achievements
+            Projets de développement de jeux innovants et réalisations techniques
           </p>
         </div>
 
@@ -180,7 +179,7 @@ const Projects = () => {
                       ? 'bg-green-500/20 text-green-400 border border-green-500/30'
                       : 'bg-yellow-500/20 text-yellow-400 border border-yellow-500/30'
                   }`}>
-                    {project.status === 'completed' ? 'Completed' : 'In Progress'}
+                    {project.status === 'completed' ? 'Terminé' : 'En Cours'}
                   </span>
                 </div>
               </div>
@@ -213,7 +212,7 @@ const Projects = () => {
 
                 {/* Key Features */}
                 <div className="mb-4">
-                  <h4 className="text-sm font-semibold text-gray-200 mb-2">Key Features:</h4>
+                  <h4 className="text-sm font-semibold text-gray-200 mb-2">Fonctionnalités Clés:</h4>
                   <ul className="text-xs text-gray-400 space-y-1">
                     {project.features.slice(0, 3).map((feature, index) => (
                       <li key={index} className="flex items-center">
@@ -227,7 +226,7 @@ const Projects = () => {
                 {/* Action Buttons */}
                 <div className="flex gap-2">
                   <button className="flex-1 bg-blue-600/20 text-blue-400 border border-blue-500/30 px-4 py-2 rounded-lg text-sm font-medium hover:bg-blue-600/30 transition-colors">
-                    View Details
+                    Voir Détails
                   </button>
                   <button className="px-4 py-2 bg-slate-700/50 text-gray-300 rounded-lg text-sm hover:bg-slate-600/50 transition-colors">
                     ↗
@@ -241,13 +240,13 @@ const Projects = () => {
         {/* Call to Action */}
         <div className="text-center mt-16">
           <p className="text-gray-300 mb-6">
-            Interested in collaborating or learning more about my work?
+            Intéressé par une collaboration ou en apprendre plus sur mon travail?
           </p>
           <a
             href="#contact"
             className="inline-flex items-center bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-3 rounded-lg font-semibold hover:scale-105 transition-transform duration-300"
           >
-            Let's Connect
+            Contactez-moi
             <span className="ml-2">→</span>
           </a>
         </div>

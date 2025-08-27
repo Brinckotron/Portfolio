@@ -1,23 +1,23 @@
 const Skills = () => {
   const skillCategories = [
     {
-      title: 'Programming Languages',
-      skills: ['C++', 'C#', 'Python', 'JavaScript/TypeScript', 'HLSL/GLSL', 'Lua'],
+      title: 'Langages de Programmation',
+      skills: ['C++', 'C#', 'Java', 'JavaScript', 'TypeScript', 'UE Blueprint'],
       color: 'blue'
     },
     {
-      title: 'Game Engines & Frameworks',
-      skills: ['Unity', 'Unreal Engine', 'Custom Engines', 'OpenGL', 'Vulkan', 'DirectX'],
+      title: 'Moteurs & Technologies',
+      skills: ['Unreal Engine 5', 'Unity', 'LibGDX', 'React', 'Next.js', 'Git'],
       color: 'purple'
     },
     {
-      title: 'Tools & Technologies',
-      skills: ['Visual Studio', 'Git', 'Perforce', 'Blender', 'Maya', 'Photoshop'],
+      title: 'Outils & Bases de Données',
+      skills: ['Jira', 'OracleDB', 'MySQL', 'Visual Studio', 'Cursor', 'Gradle'],
       color: 'green'
     },
     {
-      title: 'Game Development',
-      skills: ['Gameplay Programming', 'Graphics Programming', 'Engine Architecture', 'Performance Optimization', 'AI Systems', 'Physics'],
+      title: 'Développement de Jeux',
+      skills: ['Systèmes IA', 'Programmation Gameplay', 'Systèmes de Puzzle', 'Animation', 'Interface Utilisateur', 'Optimisation Performance'],
       color: 'yellow'
     }
   ]
@@ -36,10 +36,10 @@ const Skills = () => {
     <section id="skills" className="section-padding">
       <div className="container mx-auto max-w-6xl">
         <div className="text-center mb-16">
-          <h2 className="text-4xl lg:text-5xl font-bold gradient-text mb-6">Technical Skills</h2>
+          <h2 className="text-4xl lg:text-5xl font-bold gradient-text mb-6">Compétences Techniques</h2>
           <div className="w-24 h-1 bg-gradient-to-r from-blue-500 to-purple-500 mx-auto mb-4"></div>
           <p className="text-gray-300 text-lg max-w-2xl mx-auto">
-            A comprehensive toolkit for creating cutting-edge games and interactive experiences
+            Une boîte à outils complète pour créer des jeux et expériences interactives innovantes
           </p>
         </div>
 
@@ -69,23 +69,23 @@ const Skills = () => {
 
         {/* Additional Skills Highlights */}
         <div className="mt-16 text-center">
-          <h3 className="text-2xl font-bold text-white mb-8">Specialized Expertise</h3>
+          <h3 className="text-2xl font-bold text-white mb-8">Expertises Spécialisées</h3>
           <div className="grid md:grid-cols-3 gap-6">
             {[
               {
                 icon: '🎮',
-                title: 'Game Architecture',
-                description: 'Scalable systems design and modular component architecture'
+                title: 'Architecture de Jeux',
+                description: 'Systèmes complexes avec IA, puzzles et mécaniques innovantes'
               },
               {
                 icon: '⚡',
-                title: 'Performance Optimization',
-                description: 'Memory management, CPU/GPU profiling, and bottleneck elimination'
+                title: 'Optimisation Performance',
+                description: 'Gestion mémoire, profiling et élimination des goulots d\'étranglement'
               },
               {
                 icon: '🔧',
-                title: 'Tool Development',
-                description: 'Custom editors, asset pipelines, and workflow automation'
+                title: 'Développement d\'Outils',
+                description: 'Éditeurs personnalisés, pipelines d\'assets et automation'
               }
             ].map((item, index) => (
               <div
