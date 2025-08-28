@@ -13,6 +13,18 @@ const Hero = () => {
       
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="text-center animate-fade-in-up">
+          {/* Profile Picture */}
+          <div className="mb-8 flex justify-center">
+            <div className="relative">
+              <img
+                src="/Pro Shot.png"
+                alt="François Rossouw"
+                className="w-32 h-32 sm:w-40 sm:h-40 lg:w-48 lg:h-48 rounded-full object-cover border-4 border-blue-500/50 shadow-2xl hover:scale-105 transition-transform duration-300"
+              />
+              <div className="absolute inset-0 rounded-full bg-gradient-to-tr from-blue-500/20 to-purple-500/20"></div>
+            </div>
+          </div>
+          
           <div className="mb-6">
             <h1 className="text-4xl sm:text-6xl lg:text-7xl font-bold mb-4">
               <span className="block text-white">{t.hero.title.firstName}</span>

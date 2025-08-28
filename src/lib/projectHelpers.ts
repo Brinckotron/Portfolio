@@ -11,7 +11,8 @@ export const getProjectsData = (t: Translations) => [
     category: 'game',
     status: 'in-progress',
     year: 2024,
-    features: t.projects.projectData.xcape.features
+    features: t.projects.projectData.xcape.features,
+    sourceUrl: 'https://github.com/Brinckotron/ProjectXCAPE'
   },
   {
     id: 2,
@@ -23,7 +24,8 @@ export const getProjectsData = (t: Translations) => [
     category: 'game',
     status: 'completed',
     year: 2023,
-    features: t.projects.projectData.poker.features
+    features: t.projects.projectData.poker.features,
+    sourceUrl: 'https://github.com/Brinckotron/ProjetPoker'
   },
   {
     id: 3,
@@ -35,7 +37,8 @@ export const getProjectsData = (t: Translations) => [
     category: 'game',
     status: 'in-progress',
     year: 2024,
-    features: t.projects.projectData.togv.features
+    features: t.projects.projectData.togv.features,
+    sourceUrl: 'https://github.com/Brinckotron/MoteurDeJeuProject'
   },
   {
     id: 4,
@@ -47,7 +50,8 @@ export const getProjectsData = (t: Translations) => [
     category: 'game',
     status: 'completed',
     year: 2023,
-    features: t.projects.projectData.zombie.features
+    features: t.projects.projectData.zombie.features,
+    sourceUrl: 'https://github.com/Brinckotron/ZombieShooter'
   },
   {
     id: 5,
@@ -59,7 +63,8 @@ export const getProjectsData = (t: Translations) => [
     category: 'tool',
     status: 'completed',
     year: 2022,
-    features: t.projects.projectData.pointbuy.features
+    features: t.projects.projectData.pointbuy.features,
+    sourceUrl: 'https://github.com/Brinckotron/DnDPointBuy'
   },
   {
     id: 6,
@@ -71,6 +76,7 @@ export const getProjectsData = (t: Translations) => [
     category: 'game',
     status: 'completed',
     year: 2023,
-    features: t.projects.projectData.spectrail.features
+    features: t.projects.projectData.spectrail.features,
+    demoUrl: 'https://thefacelesssheep.itch.io/spectrail'
   }
 ]

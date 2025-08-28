@@ -118,9 +118,17 @@ const Projects = () => {
                   <button className="flex-1 bg-blue-600/20 text-blue-400 border border-blue-500/30 px-4 py-2 rounded-lg text-sm font-medium hover:bg-blue-600/30 transition-colors">
                     {t.projects.viewDetails}
                   </button>
-                  <button className="px-4 py-2 bg-slate-700/50 text-gray-300 rounded-lg text-sm hover:bg-slate-600/50 transition-colors">
-                    ↗
-                  </button>
+                  {(project.sourceUrl || project.demoUrl) && (
+                    <a
+                      href={project.demoUrl || project.sourceUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="px-4 py-2 bg-slate-700/50 text-gray-300 rounded-lg text-sm hover:bg-slate-600/50 transition-colors flex items-center justify-center"
+                      title={project.demoUrl ? "Play Demo" : "View Source"}
+                    >
+                      ↗
+                    </a>
+                  )}
                 </div>
               </div>
             </div>
