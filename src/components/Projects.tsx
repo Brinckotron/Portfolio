@@ -11,7 +11,7 @@ const Projects = () => {
       title: 'ProjectXCAPE',
       description: 'Jeu d\'horreur puzzle 3D en première personne avec IA complexe et systèmes d\'interaction avancés',
       longDescription: 'Jeu d\'aventure immersif situé dans une tombe égyptienne ancienne avec puzzles complexes et IA Anubis.',
-      image: '/api/placeholder/600/400',
+      image: '/media/XCape.png',
       technologies: ['Unreal Engine 5', 'C++', 'Blueprints', 'Animation'],
       category: 'game',
       status: 'completed',
@@ -30,7 +30,7 @@ const Projects = () => {
       title: 'Poker Roguelite',
       description: 'Jeu de poker roguelite pour Android avec IA adaptive et systèmes de progression',
       longDescription: 'Jeu de poker sophistiqué avec mécaniques roguelite, IA adaptative et progression par reliques.',
-      image: '/api/placeholder/600/400',
+      image: '/media/Poker.jpg',
       technologies: ['Unity', 'C#', 'Android SDK', 'LINQ'],
       category: 'game',
       status: 'completed',
@@ -46,10 +46,10 @@ const Projects = () => {
     },
     {
       id: 3,
-      title: 'Moteur De Jeu Project',
+      title: 'Twilight of Grim Valor',
       description: 'Plateforme action-aventure roguelite 2D avec systèmes de combat et progression',
       longDescription: 'Projet personnel ambitieux montrant la persistance et les compétences techniques croissantes.',
-      image: '/api/placeholder/600/400',
+      image: '/media/ToGV.png',
       technologies: ['Unity', 'C#', 'URP', 'Animation 2D'],
       category: 'game',
       status: 'in-progress',
@@ -68,7 +68,7 @@ const Projects = () => {
       title: 'ZombieShooter',
       description: 'Jeu de tir de survie 2D avec LibGDX et intégration base de données MySQL',
       longDescription: 'Démontre les concepts fondamentaux des moteurs de jeu et la persistance des données.',
-      image: '/api/placeholder/600/400',
+      image: '/media/Zombie.png',
       technologies: ['LibGDX', 'Java', 'MySQL', 'JDBC'],
       category: 'game',
       status: 'completed',
@@ -87,7 +87,7 @@ const Projects = () => {
       title: 'D&D Point Buy Calculator',
       description: 'Application desktop WPF pour calculer les statistiques D&D avec interface intuitive',
       longDescription: 'Outil pratique créé très tôt dans mon parcours, démontrant la passion pour résoudre des problèmes réels.',
-      image: '/api/placeholder/600/400',
+      image: '/media/PointBuy.png',
       technologies: ['C#', 'WPF', '.NET 6', 'XAML'],
       category: 'tool',
       status: 'completed',
@@ -106,7 +106,7 @@ const Projects = () => {
       title: 'Spectrail',
       description: 'Jeu créé pour Game Jam avec level design, concept et programmation',
       longDescription: 'Projet collaboratif démontrant les compétences en game design et développement rapide.',
-      image: '/api/placeholder/600/400',
+      image: '/media/Spectrail.png',
       technologies: ['Unity', 'C#', 'Level Design', 'Game Design'],
       category: 'game',
       status: 'completed',
@@ -167,12 +167,14 @@ const Projects = () => {
               key={project.id}
               className="bg-slate-900/50 rounded-xl overflow-hidden border border-slate-700/50 hover:border-blue-500/30 transition-all duration-300 card-hover group"
             >
-              {/* Project Image Placeholder */}
+              {/* Project Image */}
               <div className="h-48 bg-gradient-to-br from-blue-600/20 to-purple-600/20 relative overflow-hidden">
+                <img 
+                  src={project.image} 
+                  alt={project.title}
+                  className="w-full h-full object-cover"
+                />
                 <div className="absolute inset-0 bg-black/40 group-hover:bg-black/20 transition-all duration-300"></div>
-                <div className="absolute inset-0 flex items-center justify-center">
-                  <div className="text-6xl opacity-30">🎮</div>
-                </div>
                 <div className="absolute top-4 right-4">
                   <span className={`px-2 py-1 rounded-full text-xs font-medium ${
                     project.status === 'completed' 

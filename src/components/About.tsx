@@ -12,14 +12,12 @@ const About = () => {
             <p className="text-lg text-gray-300 leading-relaxed">
               Je suis finissant en <span className="text-blue-400 font-semibold">Programmation en Jeux Vidéo</span> au 
               Collège LaSalle, à la recherche d'un emploi où je peux appliquer mes compétences et connaissances. 
-              J'ai des bases solides en <span className="text-purple-400 font-semibold">C++, C#, Java, JavaScript</span> 
-              et de l'expérience avec <span className="text-green-400 font-semibold">Unreal Engine 5</span> et 
-              <span className="text-yellow-400 font-semibold">Unity</span>.
+              J'ai des bases solides en <span className="text-purple-400 font-semibold">C++, C#, Java, JavaScript</span> et 
+              de l'expérience avec <span className="text-green-400 font-semibold">Unreal Engine 5</span> et <span className="text-yellow-400 font-semibold">Unity</span>.
             </p>
             
             <p className="text-lg text-gray-300 leading-relaxed">
-              J'ai fait du développement <span className="text-blue-400 font-semibold">Web</span> et 
-              <span className="text-purple-400 font-semibold">Agentic Coding</span> durant mon stage à GigLinked. 
+              J'ai fait du développement <span className="text-blue-400 font-semibold">Web</span> et <span className="text-purple-400 font-semibold">Agentic Coding</span> durant mon stage à GigLinked. 
               Je suis créatif, habitué au travail d'équipe, bon communicateur, adaptable et toujours prêt à apprendre.
             </p>
 
