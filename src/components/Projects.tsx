@@ -1,131 +1,19 @@
 'use client'
 
 import { useState } from 'react'
+import { useTranslation } from '@/contexts/TranslationContext'
+import { getProjectsData } from '@/lib/projectHelpers'
 
 const Projects = () => {
   const [activeFilter, setActiveFilter] = useState('all')
+  const { t } = useTranslation()
 
-  const projects = [
-    {
-      id: 1,
-      title: 'ProjectXCAPE',
-      description: 'Jeu d\'horreur puzzle 3D en première personne avec IA complexe et systèmes d\'interaction avancés',
-      longDescription: 'Jeu d\'aventure immersif situé dans une tombe égyptienne ancienne avec puzzles complexes et IA Anubis.',
-      image: '/XCape.png',
-      technologies: ['Unreal Engine 5', 'C++', 'Blueprints', 'Animation'],
-      category: 'game',
-      status: 'in-progress',
-      year: 2024,
-      features: [
-        'Système IA complexe avec Behavior Trees',
-        'Système d\'inventaire dynamique',
-        'Framework d\'interaction avancé',
-        'Systèmes de puzzles modulaires',
-        'Animation events personnalisés',
-        'Optimisation mémoire et performance'
-      ]
-    },
-    {
-      id: 2,
-      title: 'Poker Roguelite',
-      description: 'Jeu de poker roguelite pour Android avec IA adaptive et systèmes de progression',
-      longDescription: 'Jeu de poker sophistiqué avec mécaniques roguelite, IA adaptative et progression par reliques.',
-      image: '/Poker.jpg',
-      technologies: ['Unity', 'C#', 'Android SDK', 'LINQ'],
-      category: 'game',
-      status: 'completed',
-      year: 2023,
-      features: [
-        'Algorithme de reconnaissance de mains poker',
-        'IA adaptative avec difficulté progressive',
-        'Système de reliques et upgrades',
-        'Interface mobile optimisée',
-        'Système d\'animation de cartes',
-        'Architecture événementielle'
-      ]
-    },
-    {
-      id: 3,
-      title: 'Twilight of Grim Valor',
-      description: 'Plateforme action-aventure roguelite 2D avec systèmes de combat et progression',
-      longDescription: 'Projet personnel ambitieux montrant la persistance et les compétences techniques croissantes.',
-      image: '/ToGV.png',
-      technologies: ['Unity', 'C#', 'URP', 'Animation 2D'],
-      category: 'game',
-      status: 'in-progress',
-      year: 2024,
-      features: [
-        'Machine à états complexe pour le joueur',
-        'IA ennemie polymorphique',
-        'Système de progression et XP',
-        'Interface utilisateur dynamique',
-        'Système audio intégré',
-        'Architecture modulaire'
-      ]
-    },
-    {
-      id: 4,
-      title: 'ZombieShooter',
-      description: 'Jeu de tir de survie 2D avec LibGDX et intégration base de données MySQL',
-      longDescription: 'Démontre les concepts fondamentaux des moteurs de jeu et la persistance des données.',
-      image: '/Zombie.png',
-      technologies: ['LibGDX', 'Java', 'MySQL', 'JDBC'],
-      category: 'game',
-      status: 'completed',
-      year: 2023,
-      features: [
-        'Pipeline de rendu 2D efficace',
-        'Système de power-ups dynamique',
-        'Intégration base de données MySQL',
-        'Architecture Entity-Component',
-        'Système de high scores persistant',
-        'Gestion des assets centralisée'
-      ]
-    },
-    {
-      id: 5,
-      title: 'D&D Point Buy Calculator',
-      description: 'Application desktop WPF pour calculer les statistiques D&D avec interface intuitive',
-      longDescription: 'Outil pratique créé très tôt dans mon parcours, démontrant la passion pour résoudre des problèmes réels.',
-      image: '/PointBuy.png',
-      technologies: ['C#', 'WPF', '.NET 6', 'XAML'],
-      category: 'tool',
-      status: 'completed',
-      year: 2022,
-      features: [
-        'Interface WPF responsive',
-        'Calculs mathématiques Point Buy',
-        'Gestion d\'état pour scores',
-        'Système de randomisation',
-        'Visualisateur de stats avancé',
-        'Architecture MVVM'
-      ]
-    },
-    {
-      id: 6,
-      title: 'Spectrail',
-      description: 'Jeu créé pour Game Jam avec level design, concept et programmation',
-      longDescription: 'Projet collaboratif démontrant les compétences en game design et développement rapide.',
-      image: '/Spectrail.png',
-      technologies: ['Unity', 'C#', 'Level Design', 'Game Design'],
-      category: 'game',
-      status: 'completed',
-      year: 2023,
-      features: [
-        'Développement rapide (Game Jam)',
-        'Level design créatif',
-        'Mécaniques de jeu innovantes',
-        'Collaboration d\'équipe',
-        'Polish et finition',
-        'Publication sur itch.io'
-      ]
-    }
-  ]
+  const projects = getProjectsData(t)
 
   const filters = [
-    { id: 'all', label: 'Tous les Projets' },
-    { id: 'game', label: 'Jeux' },
-    { id: 'tool', label: 'Outils' }
+    { id: 'all', label: t.projects.filters.all },
+    { id: 'game', label: t.projects.filters.games },
+    { id: 'tool', label: t.projects.filters.tools }
   ]
 
   const filteredProjects = activeFilter === 'all' 
@@ -136,10 +24,10 @@ const Projects = () => {
     <section id="projects" className="section-padding bg-slate-800/30">
       <div className="container mx-auto max-w-7xl">
         <div className="text-center mb-16">
-          <h2 className="text-4xl lg:text-5xl font-bold gradient-text mb-6">Projets Principaux</h2>
+          <h2 className="text-4xl lg:text-5xl font-bold gradient-text mb-6">{t.projects.title}</h2>
           <div className="w-24 h-1 bg-gradient-to-r from-blue-500 to-purple-500 mx-auto mb-4"></div>
           <p className="text-gray-300 text-lg max-w-2xl mx-auto">
-            Projets de développement de jeux innovants et réalisations techniques
+            {t.projects.subtitle}
           </p>
         </div>
 
@@ -181,7 +69,7 @@ const Projects = () => {
                       ? 'bg-green-500/20 text-green-400 border border-green-500/30'
                       : 'bg-yellow-500/20 text-yellow-400 border border-yellow-500/30'
                   }`}>
-                    {project.status === 'completed' ? 'Terminé' : 'En Cours'}
+                    {project.status === 'completed' ? t.projects.status.completed : t.projects.status.inProgress}
                   </span>
                 </div>
               </div>
@@ -214,7 +102,7 @@ const Projects = () => {
 
                 {/* Key Features */}
                 <div className="mb-4">
-                  <h4 className="text-sm font-semibold text-gray-200 mb-2">Fonctionnalités Clés:</h4>
+                  <h4 className="text-sm font-semibold text-gray-200 mb-2">{t.projects.keyFeatures}</h4>
                   <ul className="text-xs text-gray-400 space-y-1">
                     {project.features.slice(0, 3).map((feature, index) => (
                       <li key={index} className="flex items-center">
@@ -228,7 +116,7 @@ const Projects = () => {
                 {/* Action Buttons */}
                 <div className="flex gap-2">
                   <button className="flex-1 bg-blue-600/20 text-blue-400 border border-blue-500/30 px-4 py-2 rounded-lg text-sm font-medium hover:bg-blue-600/30 transition-colors">
-                    Voir Détails
+                    {t.projects.viewDetails}
                   </button>
                   <button className="px-4 py-2 bg-slate-700/50 text-gray-300 rounded-lg text-sm hover:bg-slate-600/50 transition-colors">
                     ↗
@@ -242,13 +130,13 @@ const Projects = () => {
         {/* Call to Action */}
         <div className="text-center mt-16">
           <p className="text-gray-300 mb-6">
-            Intéressé par une collaboration ou en apprendre plus sur mon travail?
+            {t.projects.callToAction.text}
           </p>
           <a
             href="#contact"
             className="inline-flex items-center bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-3 rounded-lg font-semibold hover:scale-105 transition-transform duration-300"
           >
-            Contactez-moi
+            {t.projects.callToAction.button}
             <span className="ml-2">→</span>
           </a>
         </div>

@@ -1,5 +1,10 @@
+'use client'
+
+import { useTranslation } from '@/contexts/TranslationContext'
+
 const Footer = () => {
   const currentYear = new Date().getFullYear()
+  const { t } = useTranslation()
 
   return (
     <footer className="bg-slate-900/80 border-t border-slate-700/50">
@@ -11,20 +16,19 @@ const Footer = () => {
               &lt;GameDev/&gt;
             </div>
             <p className="text-gray-400 text-sm max-w-xs">
-              Crafting immersive digital experiences through innovative game development 
-              and cutting-edge technology solutions.
+              {t.footer.brand.tagline}
             </p>
           </div>
 
           {/* Quick Links */}
           <div className="space-y-4">
-            <h3 className="text-white font-semibold">Quick Links</h3>
+            <h3 className="text-white font-semibold">{t.footer.quickLinks}</h3>
             <div className="space-y-2">
-              {[
-                { href: '#about', label: 'About' },
-                { href: '#skills', label: 'Skills' },
-                { href: '#projects', label: 'Projects' },
-                { href: '#contact', label: 'Contact' }
+              {              [
+                { href: '#about', label: t.nav.about },
+                { href: '#skills', label: t.nav.skills },
+                { href: '#projects', label: t.nav.projects },
+                { href: '#contact', label: t.nav.contact }
               ].map((link) => (
                 <a
                   key={link.href}
@@ -39,11 +43,11 @@ const Footer = () => {
 
           {/* Contact Info */}
           <div className="space-y-4">
-            <h3 className="text-white font-semibold">Get In Touch</h3>
+            <h3 className="text-white font-semibold">{t.footer.getInTouch}</h3>
             <div className="space-y-2 text-sm text-gray-400">
-              <p>📧 hello@francoisgamedev.com</p>
-              <p>🌍 Available Worldwide</p>
-              <p>💼 Open to new opportunities</p>
+              <p>📧 f.brinck.boucher@gmail.com</p>
+              <p>🌍 {t.footer.contact.worldwide}</p>
+              <p>💼 {t.footer.contact.opportunities}</p>
             </div>
             <div className="flex space-x-3">
               {['🔗', '💼', '🐦', '💬'].map((icon, index) => (
@@ -61,10 +65,10 @@ const Footer = () => {
 
         <div className="mt-8 pt-8 border-t border-slate-700/50 flex flex-col md:flex-row justify-between items-center">
           <p className="text-gray-400 text-sm">
-            © {currentYear} Francois Game Developer. All rights reserved.
+            © {currentYear} {t.footer.copyright}
           </p>
           <p className="text-gray-500 text-xs mt-2 md:mt-0">
-            Built with Next.js & Tailwind CSS • Hosted on Cloudflare Pages
+            {t.footer.builtWith}
           </p>
         </div>
       </div>

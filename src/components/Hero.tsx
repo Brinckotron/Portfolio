@@ -1,6 +1,9 @@
 'use client'
 
+import { useTranslation } from '@/contexts/TranslationContext'
+
 const Hero = () => {
+  const { t } = useTranslation()
   return (
     <section id="hero" className="min-h-screen flex items-center justify-center relative overflow-hidden">
       {/* Background Effects */}
@@ -12,12 +15,11 @@ const Hero = () => {
         <div className="text-center animate-fade-in-up">
           <div className="mb-6">
             <h1 className="text-4xl sm:text-6xl lg:text-7xl font-bold mb-4">
-              <span className="block text-white">François</span>
-              <span className="block gradient-text">Brinck-Boucher</span>
+              <span className="block text-white">{t.hero.title.firstName}</span>
+              <span className="block gradient-text">{t.hero.title.lastName}</span>
             </h1>
             <p className="text-xl sm:text-2xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
-              Finissant en programmation de jeux vidéo passionné par la création d'expériences 
-              immersives et la programmation de moteurs de jeu avancés.
+              {t.hero.subtitle}
             </p>
           </div>
 
@@ -26,14 +28,14 @@ const Hero = () => {
               href="#projects"
               className="group bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-blue-500/25"
             >
-              Voir Mes Jeux
+              {t.hero.buttons.viewGames}
               <span className="ml-2 group-hover:translate-x-1 transition-transform duration-200">→</span>
             </a>
             <a
               href="#contact"
               className="border-2 border-blue-500 text-blue-400 px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 hover:bg-blue-500 hover:text-white hover:scale-105"
             >
-              Me Contacter
+              {t.hero.buttons.contactMe}
             </a>
           </div>
 

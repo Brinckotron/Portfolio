@@ -1,8 +1,10 @@
 'use client'
 
 import { useState } from 'react'
+import { useTranslation } from '@/contexts/TranslationContext'
 
 const Contact = () => {
+  const { t } = useTranslation()
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -36,10 +38,10 @@ const Contact = () => {
     <section id="contact" className="section-padding">
       <div className="container mx-auto max-w-6xl">
         <div className="text-center mb-16">
-          <h2 className="text-4xl lg:text-5xl font-bold gradient-text mb-6">Contactez-moi</h2>
+          <h2 className="text-4xl lg:text-5xl font-bold gradient-text mb-6">{t.contact.title}</h2>
           <div className="w-24 h-1 bg-gradient-to-r from-blue-500 to-purple-500 mx-auto mb-4"></div>
           <p className="text-gray-300 text-lg max-w-2xl mx-auto">
-            Prêt à collaborer sur votre prochain projet de jeu? Discutons de comment nous pouvons donner vie à votre vision.
+            {t.contact.subtitle}
           </p>
         </div>
 
@@ -47,12 +49,12 @@ const Contact = () => {
           {/* Contact Form */}
           <div className="space-y-6">
             <div className="bg-slate-900/50 rounded-xl p-8 border border-slate-700/50">
-              <h3 className="text-2xl font-bold text-white mb-6">Envoyer un Message</h3>
+              <h3 className="text-2xl font-bold text-white mb-6">{t.contact.form.title}</h3>
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div className="grid md:grid-cols-2 gap-4">
                   <div>
                     <label htmlFor="name" className="block text-sm font-medium text-gray-300 mb-2">
-                      Votre Nom
+                      {t.contact.form.fields.name.label}
                     </label>
                     <input
                       type="text"
@@ -62,12 +64,12 @@ const Contact = () => {
                       onChange={handleChange}
                       required
                       className="w-full px-4 py-3 bg-slate-800/50 border border-slate-600/50 rounded-lg text-white placeholder-gray-400 focus:border-blue-500 focus:outline-none transition-colors"
-                      placeholder="Jean Dupont"
+                      placeholder={t.contact.form.fields.name.placeholder}
                     />
                   </div>
                   <div>
                     <label htmlFor="email" className="block text-sm font-medium text-gray-300 mb-2">
-                      Adresse Email
+                      {t.contact.form.fields.email.label}
                     </label>
                     <input
                       type="email"
@@ -77,14 +79,14 @@ const Contact = () => {
                       onChange={handleChange}
                       required
                       className="w-full px-4 py-3 bg-slate-800/50 border border-slate-600/50 rounded-lg text-white placeholder-gray-400 focus:border-blue-500 focus:outline-none transition-colors"
-                      placeholder="jean@exemple.com"
+                      placeholder={t.contact.form.fields.email.placeholder}
                     />
                   </div>
                 </div>
                 
                 <div>
                   <label htmlFor="subject" className="block text-sm font-medium text-gray-300 mb-2">
-                    Sujet
+                    {t.contact.form.fields.subject.label}
                   </label>
                   <input
                     type="text"
@@ -94,13 +96,13 @@ const Contact = () => {
                     onChange={handleChange}
                     required
                     className="w-full px-4 py-3 bg-slate-800/50 border border-slate-600/50 rounded-lg text-white placeholder-gray-400 focus:border-blue-500 focus:outline-none transition-colors"
-                    placeholder="Collaboration de Projet"
+                    placeholder={t.contact.form.fields.subject.placeholder}
                   />
                 </div>
 
                 <div>
                   <label htmlFor="message" className="block text-sm font-medium text-gray-300 mb-2">
-                    Message
+                    {t.contact.form.fields.message.label}
                   </label>
                   <textarea
                     id="message"
@@ -110,7 +112,7 @@ const Contact = () => {
                     rows={6}
                     required
                     className="w-full px-4 py-3 bg-slate-800/50 border border-slate-600/50 rounded-lg text-white placeholder-gray-400 focus:border-blue-500 focus:outline-none transition-colors resize-none"
-                    placeholder="Parlez-moi de vos idées de projet..."
+                    placeholder={t.contact.form.fields.message.placeholder}
                   />
                 </div>
 
@@ -118,7 +120,7 @@ const Contact = () => {
                   type="submit"
                   className="w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:scale-105 transition-all duration-300 hover:shadow-2xl hover:shadow-blue-500/25"
                 >
-                  Envoyer le Message
+                  {t.contact.form.submitButton}
                 </button>
               </form>
             </div>
@@ -127,7 +129,7 @@ const Contact = () => {
           {/* Contact Information */}
           <div className="space-y-6">
             <div className="bg-slate-900/50 rounded-xl p-8 border border-slate-700/50">
-              <h3 className="text-2xl font-bold text-white mb-6">Connectons-nous</h3>
+              <h3 className="text-2xl font-bold text-white mb-6">{t.contact.info.title}</h3>
               
               <div className="space-y-6">
                 <div className="flex items-start space-x-4">
@@ -135,9 +137,9 @@ const Contact = () => {
                     <span className="text-blue-400 text-xl">📧</span>
                   </div>
                   <div>
-                    <h4 className="font-semibold text-white">Email</h4>
+                    <h4 className="font-semibold text-white">{t.contact.info.email.label}</h4>
                     <p className="text-gray-300">f.brinck.boucher@gmail.com</p>
-                    <p className="text-gray-400 text-sm">Je réponds dans les 24 heures</p>
+                    <p className="text-gray-400 text-sm">{t.contact.info.email.response}</p>
                   </div>
                 </div>
 
@@ -146,9 +148,9 @@ const Contact = () => {
                     <span className="text-purple-400 text-xl">📍</span>
                   </div>
                   <div>
-                    <h4 className="font-semibold text-white">Localisation</h4>
-                    <p className="text-gray-300">Montréal, QC, Canada</p>
-                    <p className="text-gray-400 text-sm">Collaboration à distance bienvenue</p>
+                    <h4 className="font-semibold text-white">{t.contact.info.location.label}</h4>
+                    <p className="text-gray-300">{t.contact.info.location.city}</p>
+                    <p className="text-gray-400 text-sm">{t.contact.info.location.remote}</p>
                   </div>
                 </div>
 
@@ -157,16 +159,16 @@ const Contact = () => {
                     <span className="text-green-400 text-xl">📞</span>
                   </div>
                   <div>
-                    <h4 className="font-semibold text-white">Téléphone</h4>
+                    <h4 className="font-semibold text-white">{t.contact.info.phone.label}</h4>
                     <p className="text-gray-300">514-774-0816</p>
-                    <p className="text-gray-400 text-sm">Disponible pour opportunités temps plein</p>
+                    <p className="text-gray-400 text-sm">{t.contact.info.phone.availability}</p>
                   </div>
                 </div>
               </div>
 
               {/* Social Links */}
               <div className="mt-8 pt-6 border-t border-slate-700/50">
-                <h4 className="font-semibold text-white mb-4">Trouvez-moi en ligne</h4>
+                <h4 className="font-semibold text-white mb-4">{t.contact.info.findMeOnline}</h4>
                 <div className="flex space-x-4">
                   {socialLinks.map((link, index) => (
                     <a
@@ -186,16 +188,9 @@ const Contact = () => {
 
             {/* Quick Stats */}
             <div className="bg-gradient-to-br from-blue-600/10 to-purple-600/10 rounded-xl p-6 border border-blue-500/20">
-              <h4 className="font-semibold text-white mb-4">Pourquoi Travailler Avec Moi?</h4>
+              <h4 className="font-semibold text-white mb-4">{t.contact.whyWorkWithMe.title}</h4>
               <div className="space-y-3">
-                {[
-                  '✨ Finissant en programmation jeux vidéo (2025)',
-                  '🚀 Expérience avec projets complexes et complets',
-                  '🔧 Compétences en développement web et jeux',
-                  '🎯 Focus sur optimisation et architecture propre',
-                  '🤝 Approche collaborative et communicative',
-                  '💡 Agentic Coding et technologies modernes'
-                ].map((item, index) => (
+                {                t.contact.whyWorkWithMe.items.map((item, index) => (
                   <div key={index} className="flex items-center text-gray-300 text-sm">
                     <span className="mr-2">{item}</span>
                   </div>

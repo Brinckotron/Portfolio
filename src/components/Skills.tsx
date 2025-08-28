@@ -1,23 +1,28 @@
+'use client'
+
+import { useTranslation } from '@/contexts/TranslationContext'
+
 const Skills = () => {
+  const { t } = useTranslation()
   const skillCategories = [
     {
-      title: 'Langages de Programmation',
+      title: t.skills.categories.programmingLanguages,
       skills: ['C++', 'C#', 'Java', 'JavaScript', 'TypeScript', 'UE Blueprint'],
       color: 'blue'
     },
     {
-      title: 'Moteurs & Technologies',
+      title: t.skills.categories.enginesAndTechnologies,
       skills: ['Unreal Engine 5', 'Unity', 'LibGDX', 'React', 'Next.js', 'Git'],
       color: 'purple'
     },
     {
-      title: 'Outils & Bases de Données',
+      title: t.skills.categories.toolsAndDatabases,
       skills: ['Jira', 'OracleDB', 'MySQL', 'Visual Studio', 'Cursor', 'Gradle'],
       color: 'green'
     },
     {
-      title: 'Développement de Jeux',
-      skills: ['Systèmes IA', 'Programmation Gameplay', 'Systèmes de Puzzle', 'Animation', 'Interface Utilisateur', 'Optimisation Performance'],
+      title: t.skills.categories.gameDevelopment,
+      skills: [t.skills.gameDevSkills.aiSystems, t.skills.gameDevSkills.gameplayProgramming, t.skills.gameDevSkills.puzzleSystems, t.skills.gameDevSkills.animation, t.skills.gameDevSkills.userInterface, t.skills.gameDevSkills.performanceOptimization],
       color: 'yellow'
     }
   ]
@@ -36,10 +41,10 @@ const Skills = () => {
     <section id="skills" className="section-padding">
       <div className="container mx-auto max-w-6xl">
         <div className="text-center mb-16">
-          <h2 className="text-4xl lg:text-5xl font-bold gradient-text mb-6">Compétences Techniques</h2>
+          <h2 className="text-4xl lg:text-5xl font-bold gradient-text mb-6">{t.skills.title}</h2>
           <div className="w-24 h-1 bg-gradient-to-r from-blue-500 to-purple-500 mx-auto mb-4"></div>
           <p className="text-gray-300 text-lg max-w-2xl mx-auto">
-            Une boîte à outils complète pour créer des jeux et expériences interactives innovantes
+            {t.skills.subtitle}
           </p>
         </div>
 
@@ -69,23 +74,23 @@ const Skills = () => {
 
         {/* Additional Skills Highlights */}
         <div className="mt-16 text-center">
-          <h3 className="text-2xl font-bold text-white mb-8">Expertises Spécialisées</h3>
+          <h3 className="text-2xl font-bold text-white mb-8">{t.skills.specializedExpertise.title}</h3>
           <div className="grid md:grid-cols-3 gap-6">
             {[
               {
                 icon: '🎮',
-                title: 'Architecture de Jeux',
-                description: 'Systèmes complexes avec IA, puzzles et mécaniques innovantes'
+                title: t.skills.specializedExpertise.gameArchitecture.title,
+                description: t.skills.specializedExpertise.gameArchitecture.description
               },
               {
                 icon: '⚡',
-                title: 'Optimisation Performance',
-                description: 'Gestion mémoire, profiling et élimination des goulots d\'étranglement'
+                title: t.skills.specializedExpertise.performanceOptimization.title,
+                description: t.skills.specializedExpertise.performanceOptimization.description
               },
               {
                 icon: '🔧',
-                title: 'Développement d\'Outils',
-                description: 'Éditeurs personnalisés, pipelines d\'assets et automation'
+                title: t.skills.specializedExpertise.toolDevelopment.title,
+                description: t.skills.specializedExpertise.toolDevelopment.description
               }
             ].map((item, index) => (
               <div
