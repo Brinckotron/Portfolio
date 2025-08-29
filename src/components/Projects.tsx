@@ -115,9 +115,20 @@ const Projects = () => {
 
                 {/* Action Buttons */}
                 <div className="flex gap-2">
-                  <button className="flex-1 bg-blue-600/20 text-blue-400 border border-blue-500/30 px-4 py-2 rounded-lg text-sm font-medium hover:bg-blue-600/30 transition-colors">
-                    {t.projects.viewDetails}
-                  </button>
+                  {(project.sourceUrl || project.demoUrl) ? (
+                    <a
+                      href={project.demoUrl || project.sourceUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex-1 bg-blue-600/20 text-blue-400 border border-blue-500/30 px-4 py-2 rounded-lg text-sm font-medium hover:bg-blue-600/30 transition-colors text-center"
+                    >
+                      {t.projects.viewDetails}
+                    </a>
+                  ) : (
+                    <button className="flex-1 bg-blue-600/20 text-blue-400 border border-blue-500/30 px-4 py-2 rounded-lg text-sm font-medium hover:bg-blue-600/30 transition-colors">
+                      {t.projects.viewDetails}
+                    </button>
+                  )}
                   {(project.sourceUrl || project.demoUrl) && (
                     <a
                       href={project.demoUrl || project.sourceUrl}
